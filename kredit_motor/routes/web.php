@@ -27,11 +27,13 @@ Route::prefix('admin')
 
         // Master Data (Khusus Admin)
         Route::resource('motor',         \App\Http\Controllers\Admin\MotorController::class);
-        Route::resource('jenis-motor',   \App\Http\Controllers\Admin\JenisMotorController::class);
+
         Route::resource('jenis-cicilan', \App\Http\Controllers\Admin\JenisCicilanController::class);
         Route::resource('asuransi',      \App\Http\Controllers\Admin\AsuransiController::class);
         Route::resource('metode-bayar',  \App\Http\Controllers\Admin\MetodeBayarController::class);
         
+        Route::resource('jenis-motor', \App\Http\Controllers\Admin\JenisMotorController::class);
+Route::get('/jenis-motor/{id}/toggle', [\App\Http\Controllers\Admin\JenisMotorController::class, 'toggleStatus'])->name('jenis-motor.toggle');
            
         // Hero Banner
         Route::resource('hero', \App\Http\Controllers\Admin\HeroController::class);

@@ -12,12 +12,15 @@ class JenisMotor extends Model
     protected $table = 'jenis_motor';
     
     protected $fillable = [
-        'nama_jenis'
+        'nama_jenis',
+        'keterangan',
+        'is_active',
     ];
     
-    /**
-     * Relasi dengan motor
-     */
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+    
     public function motor()
     {
         return $this->hasMany(Motor::class, 'jenis_motor_id');

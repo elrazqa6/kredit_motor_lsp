@@ -8,55 +8,66 @@ use App\Models\JenisMotor;
 
 class JenisMotorController extends Controller
 {
-    public function index()
-    {
-        $data = JenisMotor::all();
-        return view('admin.jenis_motor.index', compact('data'));
-    }
+ public function index(Request $request)
+{
+    $perPage = $request->get('per_page', 10);
+    $jenisMotor = JenisMotor::orderBy('created_at', 'desc')->paginate($perPage);  // ← ganti $data jadi $jenisMotor
+    
+    return view('admin.jenis_motor.index', compact('jenisMotor'));  // ← compact('jenisMotor')
+}
 
     public function create()
     {
         return view('admin.jenis_motor.create');
     }
 
-    public function store(Request $request)
-    {
+ 
+public function store(Request $request)
+{
+    try {
         $request->validate([
-            'jenis' => 'required'
+            'nama_jenis' => 'required|string|max:255|unique:jenis_motor',
+            'keterangan' => 'nullable|string',
+            'is_active' => 'nullable|in:on,off,0,1',  // ← validasi untuk checkbox
         ]);
-
-        JenisMotor::create([
-            'jenis' => $request->jenis
-        ]);
-
+        
+        $jenisMotor = new JenisMotor();
+        $jenisMotor->nama_jenis = $request->nama_jenis;
+        $jenisMotor->keterangan = $request->keterangan;
+        $jenisMotor->is_active = $request->has('is_active') ? 1 : 0;
+        $jenisMotor->save();
+        
         return redirect()->route('admin.jenis-motor.index')
-            ->with('success', 'Data berhasil ditambahkan');
+            ->with('success', 'Jenis motor "' . $request->nama_jenis . '" berhasil ditambahkan!');
+        
+    } catch (\Exception $e) {
+        return redirect()->back()
+            ->with('error', 'Gagal menambahkan: ' . $e->getMessage())
+            ->withInput();
     }
-
-    public function edit($id)
-    {
-        $item = JenisMotor::findOrFail($id);
-        return view('admin.jenis_motor.edit', compact('item'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'jenis' => 'required'
-        ]);
-
-        $item = JenisMotor::findOrFail($id);
-        $item->update([
-            'jenis' => $request->jenis
-        ]);
-
-        return redirect()->route('admin.jenis-motor.index')
-            ->with('success', 'Data berhasil diupdate');
-    }
+}
 
     public function destroy($id)
     {
-        JenisMotor::destroy($id);
-        return back()->with('success', 'Data berhasil dihapus');
+        $item = JenisMotor::findOrFail($id);
+        
+        // Cek apakah ada motor yang menggunakan jenis ini
+        if ($item->motor()->count() > 0) {
+            return redirect()->route('admin.jenis-motor.index')
+                ->with('error', 'Jenis motor tidak dapat dihapus karena masih digunakan oleh data motor!');
+        }
+        
+        $item->delete();
+        
+        return redirect()->route('admin.jenis-motor.index')
+            ->with('success', 'Jenis motor berhasil dihapus!');
+    }
+    
+    public function toggleStatus($id)
+    {
+        $item = JenisMotor::findOrFail($id);
+        $item->update(['is_active' => !$item->is_active]);
+        
+        return redirect()->back()->with('success', 'Status jenis motor berhasil diubah!');
     }
 }

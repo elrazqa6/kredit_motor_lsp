@@ -77,9 +77,9 @@
                             <a href="{{ route('marketing.pengiriman.show', $item->id) }}" class="btn btn-sm btn-outline-primary" title="Detail">
                                 <i class="fas fa-eye"></i>
                             </a>                        
-                            <a href="{{ route('marketing.pengiriman.edit', $item->id) }}" class="btn btn-sm btn-outline-warning" title="Edit">
-                                <i class="fas fa-eye"></i>
-                            </a>
+                           <a href="{{ route('marketing.pengiriman.edit', $item->id) }}" class="btn btn-sm btn-outline-warning" title="Edit">
+    <i class="fas fa-edit"></i>  {{-- GANTI fa-eye menjadi fa-edit --}}
+</a>
                          </td>
                      </tr>
                     @empty

@@ -263,71 +263,53 @@
     </style>
     @stack('styles')
 </head>
-<body>
-<div class="app-wrap">
 
-    {{-- Sidebar --}}
-    <div class="sidebar">
-        <div class="sb-brand">
-            <div class="sb-logo">
-                <div class="sb-logo-icon">
-                    <i class="fas fa-layer-group"></i>
-                </div>
+
+    <!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+        <div class="logo">
+            <a href="" class="d-flex align-items-center gap-2 text-decoration-none">
+                <img src="{{ asset('img/core-img/logo.png') }}" alt="Kredit Motor Logo" style="height: 40px; width: auto;">
                 <div>
-                    <div class="sb-logo-text">KreditMotor</div>
-                    <div class="sb-logo-sub">CEO Panel</div>
+                    
                 </div>
-            </div>
-        </div>
-
-        <div class="sb-nav">
-            <span class="sb-section-label">Menu Utama</span>
-            <a href="{{ route('ceo.dashboard') }}"
-               class="sb-link {{ request()->routeIs('ceo.dashboard') ? 'active' : '' }}">
-                <i class="fas fa-th-large"></i> Dashboard
-            </a>
-            <a href="{{ route('ceo.users.index') }}"
-               class="sb-link {{ request()->routeIs('ceo.users.*') ? 'active' : '' }}">
-                <i class="fas fa-users"></i> Manajemen User
-            </a>
-            <a href="{{ route('ceo.kredit.index') }}"
-               class="sb-link {{ request()->routeIs('ceo.kredit.*') ? 'active' : '' }}">
-                <i class="fas fa-credit-card"></i> Laporan Kredit
-            </a>
-            <a href="{{ route('ceo.motor.index') }}"
-               class="sb-link {{ request()->routeIs('ceo.motor.*') ? 'active' : '' }}">
-                <i class="fas fa-motorcycle"></i> Data Motor
-            </a>
-
-            <hr class="sb-divider" style="margin-top: 16px;">
-            <span class="sb-section-label">Laporan</span>
-            <a href="{{ route('ceo.analitik.index') }}" class="sb-link">
-                <i class="fas fa-chart-bar"></i> Analitik
-            </a>
-            <a href="{{ route('ceo.export.index') }}" class="sb-link">
-                <i class="fas fa-file-export"></i> Export Data
-            </a>
-        </div>
-
-        <div class="sb-bottom">
-            <div class="sb-user">
-                <div class="sb-avatar">
-                    {{ strtoupper(substr(auth()->user()->name, 0, 2)) }}
-                </div>
-                <div style="flex:1; min-width:0;">
-                    <div class="sb-user-name">{{ auth()->user()->name }}</div>
-                    <div class="sb-user-role">Chief Executive Officer</div>
-                </div>
-            </div>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-            <a href="#" class="sb-logout"
-               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="fas fa-sign-out-alt"></i> Logout
             </a>
         </div>
     </div>
+
+    <div class="sb-nav">
+        <span class="sb-section-label">Menu Utama</span>
+        <a href="{{ route('ceo.dashboard') }}" class="sb-link {{ request()->routeIs('ceo.dashboard') ? 'active' : '' }}">
+            <i class="fas fa-th-large"></i> Dashboard
+        </a>
+        <a href="{{ route('ceo.users.index') }}" class="sb-link {{ request()->routeIs('ceo.users.*') ? 'active' : '' }}">
+            <i class="fas fa-users"></i> Manajemen User
+        </a>
+
+        <hr class="sb-divider">
+        <span class="sb-section-label">Laporan & Analitik</span>
+        
+        <a href="{{ route('ceo.kredit.index') }}" class="sb-link {{ request()->routeIs('ceo.kredit.*') ? 'active' : '' }}">
+            <i class="fas fa-credit-card"></i> Laporan Kredit
+        </a>
+        <a href="{{ route('ceo.motor.index') }}" class="sb-link {{ request()->routeIs('ceo.motor.*') ? 'active' : '' }}">
+            <i class="fas fa-motorcycle"></i> Data Motor
+        </a>
+        <a href="{{ route('ceo.analitik.index') }}" class="sb-link {{ request()->routeIs('ceo.analitik.*') ? 'active' : '' }}">
+            <i class="fas fa-chart-bar"></i> Analitik
+        </a>
+        <a href="{{ route('ceo.export.index') }}" class="sb-link {{ request()->routeIs('ceo.export.*') ? 'active' : '' }}">
+            <i class="fas fa-download"></i> Export Data
+        </a>
+
+        <hr class="sb-divider">
+        <a href="{{ route('logout') }}" class="sb-link text-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
+    </div>
+</aside>
 
     {{-- Main Content --}}
     <div class="main-content">

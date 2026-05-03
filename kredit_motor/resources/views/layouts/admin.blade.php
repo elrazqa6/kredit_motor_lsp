@@ -345,10 +345,9 @@
         <div class="sidebar-brand">
             <div class="logo">
                 <a href="{{ url('/') }}" class="d-flex align-items-center gap-2 text-decoration-none">
-                    <img src="{{ asset('img/core-img/logo.png') }}" alt="Kredit Motor Logo" style="height: 32px; width: auto;">
+                    <img src="{{ asset('img/core-img/logo.png') }}" alt="Kredit Motor Logo" style="height: 45px; width: auto;">
                     <div>
-                        <div class="brand-name">Kredit Motor</div>
-                        <div class="brand-sub">Admin Panel</div>
+                        
                     </div>
                 </a>
             </div>
@@ -419,14 +418,6 @@
                 </a>
             </div>
 
-            <div class="nav-item">
-                <a href="{{ route('admin.metode-bayar.index') }}" class="nav-link {{ request()->routeIs('admin.metode-bayar*') ? 'active' : '' }}">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                    </svg>
-                    Metode Bayar
-                </a>
-</div>
 
         </nav>
 
