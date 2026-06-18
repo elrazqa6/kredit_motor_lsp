@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 02, 2026 at 01:26 PM
+-- Generation Time: Jun 18, 2026 at 06:24 PM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.28
 
@@ -151,7 +151,55 @@ INSERT INTO `angsuran` (`id`, `id_kredit`, `tgl_bayar`, `angsuran_ke`, `tgl_jatu
 (130, 14, NULL, 9, '2027-01-30', 3186000, 'Angsuran ke-9', '2026-04-30 04:34:55', '2026-04-30 04:34:55'),
 (131, 14, NULL, 10, '2027-03-02', 3186000, 'Angsuran ke-10', '2026-04-30 04:34:55', '2026-04-30 04:34:55'),
 (132, 14, NULL, 11, '2027-03-30', 3186000, 'Angsuran ke-11', '2026-04-30 04:34:55', '2026-04-30 04:34:55'),
-(133, 14, NULL, 12, '2027-04-30', 3186000, 'Angsuran ke-12', '2026-04-30 04:34:55', '2026-04-30 04:34:55');
+(133, 14, NULL, 12, '2027-04-30', 3186000, 'Angsuran ke-12', '2026-04-30 04:34:55', '2026-04-30 04:34:55'),
+(134, 15, NULL, 1, '2026-07-12', 3186000, 'Angsuran ke-1', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(135, 15, NULL, 2, '2026-08-12', 3186000, 'Angsuran ke-2', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(136, 15, NULL, 3, '2026-09-12', 3186000, 'Angsuran ke-3', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(137, 15, NULL, 4, '2026-10-12', 3186000, 'Angsuran ke-4', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(138, 15, NULL, 5, '2026-11-12', 3186000, 'Angsuran ke-5', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(139, 15, NULL, 6, '2026-12-12', 3186000, 'Angsuran ke-6', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(140, 15, NULL, 7, '2027-01-12', 3186000, 'Angsuran ke-7', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(141, 15, NULL, 8, '2027-02-12', 3186000, 'Angsuran ke-8', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(142, 15, NULL, 9, '2027-03-12', 3186000, 'Angsuran ke-9', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(143, 15, NULL, 10, '2027-04-12', 3186000, 'Angsuran ke-10', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(144, 15, NULL, 11, '2027-05-12', 3186000, 'Angsuran ke-11', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(145, 15, NULL, 12, '2027-06-12', 3186000, 'Angsuran ke-12', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(146, 16, '2026-06-16', 1, '2026-07-16', 2803500, 'Angsuran ke-1', '2026-06-16 06:06:17', '2026-06-16 06:12:43'),
+(147, 16, NULL, 2, '2026-08-16', 2803500, 'Angsuran ke-2', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(148, 16, NULL, 3, '2026-09-16', 2803500, 'Angsuran ke-3', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(149, 16, NULL, 4, '2026-10-16', 2803500, 'Angsuran ke-4', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(150, 16, NULL, 5, '2026-11-16', 2803500, 'Angsuran ke-5', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(151, 16, NULL, 6, '2026-12-16', 2803500, 'Angsuran ke-6', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(152, 16, NULL, 7, '2027-01-16', 2803500, 'Angsuran ke-7', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(153, 16, NULL, 8, '2027-02-16', 2803500, 'Angsuran ke-8', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(154, 16, NULL, 9, '2027-03-16', 2803500, 'Angsuran ke-9', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(155, 16, NULL, 10, '2027-04-16', 2803500, 'Angsuran ke-10', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(156, 16, NULL, 11, '2027-05-16', 2803500, 'Angsuran ke-11', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(157, 16, NULL, 12, '2027-06-16', 2803500, 'Angsuran ke-12', '2026-06-16 06:06:17', '2026-06-16 06:06:17'),
+(158, 17, '2026-06-16', 1, '2026-07-16', 2658708, 'Angsuran ke-1', '2026-06-16 06:36:49', '2026-06-16 06:38:23'),
+(159, 17, NULL, 2, '2026-08-16', 2658708, 'Angsuran ke-2', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(160, 17, NULL, 3, '2026-09-16', 2658708, 'Angsuran ke-3', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(161, 17, NULL, 4, '2026-10-16', 2658708, 'Angsuran ke-4', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(162, 17, NULL, 5, '2026-11-16', 2658708, 'Angsuran ke-5', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(163, 17, NULL, 6, '2026-12-16', 2658708, 'Angsuran ke-6', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(164, 17, NULL, 7, '2027-01-16', 2658708, 'Angsuran ke-7', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(165, 17, NULL, 8, '2027-02-16', 2658708, 'Angsuran ke-8', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(166, 17, NULL, 9, '2027-03-16', 2658708, 'Angsuran ke-9', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(167, 17, NULL, 10, '2027-04-16', 2658708, 'Angsuran ke-10', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(168, 17, NULL, 11, '2027-05-16', 2658708, 'Angsuran ke-11', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(169, 17, NULL, 12, '2027-06-16', 2658708, 'Angsuran ke-12', '2026-06-16 06:36:49', '2026-06-16 06:36:49'),
+(170, 18, '2026-06-18', 1, '2026-07-18', 2781000, 'Angsuran ke-1', '2026-06-18 09:00:10', '2026-06-18 10:35:38'),
+(171, 18, NULL, 2, '2026-08-18', 2781000, 'Angsuran ke-2', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(172, 18, NULL, 3, '2026-09-18', 2781000, 'Angsuran ke-3', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(173, 18, NULL, 4, '2026-10-18', 2781000, 'Angsuran ke-4', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(174, 18, NULL, 5, '2026-11-18', 2781000, 'Angsuran ke-5', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(175, 18, NULL, 6, '2026-12-18', 2781000, 'Angsuran ke-6', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(176, 18, NULL, 7, '2027-01-18', 2781000, 'Angsuran ke-7', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(177, 18, NULL, 8, '2027-02-18', 2781000, 'Angsuran ke-8', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(178, 18, NULL, 9, '2027-03-18', 2781000, 'Angsuran ke-9', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(179, 18, NULL, 10, '2027-04-18', 2781000, 'Angsuran ke-10', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(180, 18, NULL, 11, '2027-05-18', 2781000, 'Angsuran ke-11', '2026-06-18 09:00:10', '2026-06-18 09:00:10'),
+(181, 18, NULL, 12, '2027-06-18', 2781000, 'Angsuran ke-12', '2026-06-18 09:00:10', '2026-06-18 09:00:10');
 
 -- --------------------------------------------------------
 
@@ -161,12 +209,12 @@ INSERT INTO `angsuran` (`id`, `id_kredit`, `tgl_bayar`, `angsuran_ke`, `tgl_jatu
 
 CREATE TABLE `asuransi` (
   `id` int NOT NULL,
-  `nama_asuransi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nama_perusahaan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama_asuransi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama_perusahaan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `biaya` decimal(15,0) NOT NULL DEFAULT '0',
   `margin_asuransi` decimal(5,2) NOT NULL DEFAULT '0.00',
-  `no_rekening` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `url_logo` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `no_rekening` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url_logo` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -176,7 +224,8 @@ CREATE TABLE `asuransi` (
 --
 
 INSERT INTO `asuransi` (`id`, `nama_asuransi`, `nama_perusahaan`, `biaya`, `margin_asuransi`, `no_rekening`, `url_logo`, `created_at`, `updated_at`) VALUES
-(1, 'Asuransi Kendaraan', 'Jasindo', 5000000, 20.00, '1289281276', 'asuransi/C2eCv3qOH1ZdfxUSu6ZARDS2Gg2u0syMonGmTL0z.png', '2026-04-20 18:59:26', '2026-04-20 18:59:26');
+(2, 'Allianz TLO', 'PT Allianz', 500000, 5.00, '1289281276', 'asuransi/A8tsMHI6q8cxvnYOz3O5YUKocFOBiVJYi1TKKuWI.png', '2026-06-14 21:42:11', '2026-06-14 21:42:11'),
+(4, 'Simas Motor', 'Sinar Mas', 750000, 7.50, '9876543210', NULL, '2026-06-15 07:47:37', '2026-06-15 07:47:37');
 
 -- --------------------------------------------------------
 
@@ -185,8 +234,8 @@ INSERT INTO `asuransi` (`id`, `nama_asuransi`, `nama_perusahaan`, `biaya`, `marg
 --
 
 CREATE TABLE `cache` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` bigint NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -197,8 +246,8 @@ CREATE TABLE `cache` (
 --
 
 CREATE TABLE `cache_locks` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `owner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` bigint NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -210,11 +259,11 @@ CREATE TABLE `cache_locks` (
 
 CREATE TABLE `failed_jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -312,8 +361,8 @@ INSERT INTO `jenis_motor` (`id`, `nama_jenis`, `created_at`, `updated_at`) VALUE
 
 CREATE TABLE `jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `queue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint UNSIGNED NOT NULL,
   `reserved_at` int UNSIGNED DEFAULT NULL,
   `available_at` int UNSIGNED NOT NULL,
@@ -327,13 +376,13 @@ CREATE TABLE `jobs` (
 --
 
 CREATE TABLE `job_batches` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `total_jobs` int NOT NULL,
   `pending_jobs` int NOT NULL,
   `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext COLLATE utf8mb4_unicode_ci,
+  `failed_job_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `cancelled_at` int DEFAULT NULL,
   `created_at` int NOT NULL,
   `finished_at` int DEFAULT NULL
@@ -368,7 +417,11 @@ INSERT INTO `kredit` (`id`, `id_pengajuan_kredit`, `id_metode_bayar`, `tgl_mulai
 (11, 10, 1, '2026-04-26', '2027-04-26', 25488000, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-04-25 20:54:34', '2026-04-27 05:17:15'),
 (12, 11, 1, '2026-04-27', '2027-04-27', 25488000, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-04-26 21:25:01', '2026-04-27 21:24:58'),
 (13, 12, 1, '2026-04-28', '2028-04-28', 28909135, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-04-28 00:07:00', '2026-04-30 02:03:52'),
-(14, 13, 1, '2026-04-30', '2027-04-30', 38232000, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-04-30 04:34:55', '2026-04-30 04:34:55');
+(14, 13, 1, '2026-04-30', '2027-04-30', 38232000, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-04-30 04:34:55', '2026-04-30 04:34:55'),
+(15, 14, 1, '2026-06-12', '2027-06-12', 38232000, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-06-12 00:57:02', '2026-06-12 00:57:02'),
+(16, 15, 1, '2026-06-16', '2027-06-16', 30838500, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-06-16 06:06:17', '2026-06-16 06:12:43'),
+(17, 16, 1, '2026-06-16', '2027-06-16', 29245788, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-06-16 06:36:49', '2026-06-16 06:38:23'),
+(18, 17, 1, '2026-06-18', '2027-06-18', 30591000, 'Dicicil', 'Kredit aktif dari pengajuan yang disetujui', '2026-06-18 09:00:10', '2026-06-18 10:35:38');
 
 -- --------------------------------------------------------
 
@@ -405,7 +458,7 @@ INSERT INTO `metode_bayar` (`id`, `metode_pembayaran`, `tempat_bayar`, `no_reken
 
 CREATE TABLE `migrations` (
   `id` int UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -473,8 +526,8 @@ INSERT INTO `motor` (`id`, `nama_motor`, `merk`, `jenis_id`, `harga_cash`, `harg
 --
 
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -536,7 +589,14 @@ INSERT INTO `pelanggans` (`id`, `user_id`, `nama_pelanggan`, `email`, `no_telp`,
 (28, NULL, 'el razqa', NULL, '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-04-21 09:13:35', '2026-04-21 09:13:35'),
 (30, NULL, 'el razqa', NULL, '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-04-21 09:13:49', '2026-04-21 09:13:49'),
 (31, 9, 'el razqa', NULL, '085176802810', 'Jl.Curug Mas 1 Gg. Mangga No.36 RT 01/12', 'Bogor', 'Jawa Barat', '16920', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-04-21 09:20:08', '2026-04-27 00:43:23'),
-(32, 12, 'Rehan', 'rehanc@gmail.com', '08726728118', 'BDB 2 Jl. Flamboyan No 3 RT 09/11', 'Bogor', 'Jawa Barat', '16922', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-04-30 04:34:26', '2026-04-30 04:34:26');
+(32, 12, 'Rehan', 'rehanc@gmail.com', '08726728118', 'BDB 2 Jl. Flamboyan No 3 RT 09/11', 'Bogor', 'Jawa Barat', '16922', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-04-30 04:34:26', '2026-04-30 04:34:26'),
+(33, 13, 'el razqa', 'teddy001@gmail.com', '085176802810', 'Jl.curug mas', 'Bogor', 'Jawa Barat', '16922', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-12 00:56:47', '2026-06-12 00:56:47'),
+(34, 14, 'achmad', 'achmadarr@gmail.com', '085176802810', 'Jl.curug mas', 'Bogor', 'Jawa Barat', '16922', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 05:48:43', '2026-06-16 05:48:50'),
+(35, 15, 'Fadhil', 'fadhil01@gmail.com', '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 05:54:42', '2026-06-16 05:54:42'),
+(36, 17, 'testes', 'tes01@gmail.com', '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 06:02:59', '2026-06-16 06:02:59'),
+(37, 18, 'chaeruzzaman', 'chaeruzzaman@gmail.com', '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 06:04:16', '2026-06-16 06:04:16'),
+(38, 19, 'Callista', 'callista01@gmail.com', '085176', 'Jl. Raya Bogor 01', 'Bogor', 'Jawa Barat', '16922', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 06:36:22', '2026-06-16 06:36:22'),
+(39, 20, 'Danial', 'danial01@gmail.com', '085176802810', 'Jl.Tangerang 1', 'Bogor', 'Jawa Barat', '16922', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-18 08:57:35', '2026-06-18 10:41:48');
 
 -- --------------------------------------------------------
 
@@ -552,9 +612,9 @@ CREATE TABLE `pembayaran` (
   `nominal_bayar` double NOT NULL,
   `tgl_bayar` date DEFAULT NULL,
   `denda` double NOT NULL DEFAULT '0',
-  `status_bayar` enum('Belum Bayar','Lunas','Terlambat') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Belum Bayar',
-  `bukti_bayar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `keterangan` text COLLATE utf8mb4_unicode_ci,
+  `status_bayar` enum('Belum Bayar','Lunas','Terlambat') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Belum Bayar',
+  `bukti_bayar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -573,9 +633,9 @@ CREATE TABLE `pembayarans` (
   `nominal_bayar` double NOT NULL,
   `tgl_bayar` datetime DEFAULT NULL,
   `denda` double NOT NULL DEFAULT '0',
-  `status_bayar` enum('Belum Bayar','Lunas','Terlambat') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Belum Bayar',
-  `bukti_bayar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `keterangan` text COLLATE utf8mb4_unicode_ci,
+  `status_bayar` enum('Belum Bayar','Lunas','Terlambat') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Belum Bayar',
+  `bukti_bayar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -626,7 +686,11 @@ INSERT INTO `pengajuan_kredit` (`id`, `id_pelanggan`, `id_motor`, `id_jenis_cici
 (10, 31, 3, 2, 1, 2, 7600000, 'Lunas', NULL, '2026-04-26 05:49:50', 'Pembayaran sukses via settlement', 'Disetujui', '2026-04-25 20:53:56', '2026-04-25 22:49:50', '2026-04-26', 38000000, 20, 38232000, 416666.66666667, 3186000, 12, 'dokumen/kk/kE9n7RMB0fsMTkHHkW57GteyhWyiKECL0DgzLvkm.jpg', 'dokumen/ktp/oBoQkHBQ4ytqVRTZskmbLGQ8fLhG4n10fJp0wDC9.jpg', NULL, 'dokumen/slip_gaji/Ah9iQFEVYlroo7RRALBRsstg0AEIqITYiROhzttL.png', 'dokumen/foto/Ipa59tacCbfhCPVEdZK3LAKRbmnHKEAUvQuMNXt2.jpg', NULL),
 (11, 31, 3, 2, 1, 2, 7600000, 'Lunas', NULL, '2026-04-27 04:25:52', NULL, 'Disetujui', '2026-04-26 21:24:14', '2026-04-26 21:25:52', '2026-04-27', 38000000, 20, 38232000, 416666.66666667, 3186000, 12, 'dokumen/kk/GYRu9ALcRDQ57A8HBgerTM1ZjvvT5XoS6q2I5iFk.png', 'dokumen/ktp/cTlS7m8WfokJx1C1wBgUOByI4luzTmflVHx8b5Nm.jpg', NULL, 'dokumen/slip_gaji/tLq60wLoMnub5Qr7ojk0LBsPJEwFiAkAV8xeK7DJ.png', 'dokumen/foto/fiwrDQybeYaNCQ1DOO3N5qpfSnRwddE1Rk9VYxeM.png', NULL),
 (12, 31, 1, 3, 1, 2, 6620000, 'Lunas', NULL, '2026-04-28 07:08:34', NULL, 'Disetujui', '2026-04-28 00:05:58', '2026-04-28 00:08:34', '2026-04-28', 33100000, 20, 36516800, 208333.33333333, 1521533.3333333, 24, 'dokumen/kk/xnzwWAHCcQiDC30WkBfpV81xszaERXMyRcY2fNeD.png', 'dokumen/ktp/Dp9WNSVvyVkZtOspWe5HeTBFk0JvgVGD3SSUvxX2.png', NULL, 'dokumen/slip_gaji/6Ele5JScC4fbaOrr5CD1qLPd99mtSvzuvPLxWgA5.png', 'dokumen/foto/MjA6Nnh82TWD36I8oDIM6YOOlV7GXv5wpWbTUJRP.png', 'p p apah'),
-(13, 32, 3, 2, 1, 1, 7600000, 'Lunas', NULL, '2026-04-30 12:18:35', NULL, 'Disetujui', '2026-04-30 04:34:27', '2026-04-30 05:18:35', '2026-04-30', 38000000, 20, 38232000, 416666.66666667, 3186000, 12, 'dokumen/kk/bUOyZFkzw7inAZxpL6JndionhLyXdmzaP54rOdxn.png', 'dokumen/ktp/ecAwDbsOrslMGASs124Mb6Lp3ojKa9nbkDNIXSBf.png', 'dokumen/npwp/eVISumSlKlOThF9q9EucYO2znv6ikQ6ON8G5lHA1.png', 'dokumen/slip_gaji/GhHayhQ7JWTe4y51TllSEqeaVZoaUgu5USB4JdXS.png', 'dokumen/foto/8yaLE9rAfak4hXTZfWUUjFUAtK2OUlDd1QIYom8h.png', NULL);
+(13, 32, 3, 2, 1, 1, 7600000, 'Lunas', NULL, '2026-04-30 12:18:35', NULL, 'Disetujui', '2026-04-30 04:34:27', '2026-04-30 05:18:35', '2026-04-30', 38000000, 20, 38232000, 416666.66666667, 3186000, 12, 'dokumen/kk/bUOyZFkzw7inAZxpL6JndionhLyXdmzaP54rOdxn.png', 'dokumen/ktp/ecAwDbsOrslMGASs124Mb6Lp3ojKa9nbkDNIXSBf.png', 'dokumen/npwp/eVISumSlKlOThF9q9EucYO2znv6ikQ6ON8G5lHA1.png', 'dokumen/slip_gaji/GhHayhQ7JWTe4y51TllSEqeaVZoaUgu5USB4JdXS.png', 'dokumen/foto/8yaLE9rAfak4hXTZfWUUjFUAtK2OUlDd1QIYom8h.png', NULL),
+(14, 33, 3, 2, 1, 1, 7600000, 'Lunas', NULL, '2026-06-12 07:57:22', NULL, 'Disetujui', '2026-06-12 00:56:48', '2026-06-12 00:57:22', '2026-06-12', 38000000, 20, 38232000, 416666.66666667, 3186000, 12, 'dokumen/kk/jmalgkb61W6Ei4mf9ck8IN8cL5vMc4y6MqcQGc01.png', 'dokumen/ktp/XeUnmFs9tW2stnnyp1nfhK5g81e1vURWSkJ2DCM6.jpg', 'dokumen/npwp/myD5XB76LTnJLYfqrnuyDlgbwfkCiXc5D5TQ8z4Y.jpg', 'dokumen/slip_gaji/itsCirg41bEv8locz7hgaWBZ2ZXUOtRiPSXIjoxw.png', 'dokumen/foto/rq01HbQ1iZnV9XSVx5vR65yx5rHbv2gigt1k1Jn9.jpg', NULL),
+(15, 37, 3, 2, 4, NULL, 7600000, 'Lunas', NULL, '2026-06-16 13:11:38', NULL, 'Disetujui', '2026-06-16 06:05:35', '2026-06-16 06:11:38', '2026-06-16', 38000000, 20, 33642000, 62500, 2803500, 12, 'dokumen/kk/UrMLnJQyZ7372YdiHaUUgSUoDlQlF2YO0zAgGYkt.png', 'dokumen/ktp/E5vu4JQVypjssAJVIJN43qnnnYLTVLziDjwSwqJL.png', NULL, 'dokumen/slip_gaji/WskIALYe2KppBRf7y0FOWnFzlZntnvoWHhi5XlzU.jpg', 'dokumen/foto/JoMObZQXVGoAx3mxU3zem6ClWEEkW83IVUOiH7wg.jpg', NULL),
+(16, 38, 5, 2, 4, 1, 7197800, 'Lunas', NULL, '2026-06-16 13:36:38', NULL, 'Disetujui', '2026-06-16 06:36:22', '2026-06-16 06:36:49', '2026-06-16', 35989000, 20, 31904496, 62500, 2658708, 12, 'dokumen/kk/gxqtuxnIG7CRz9I9OHnVudnxjrOQmVjLnVC8eVZe.png', 'dokumen/ktp/OsalJplIgv3jPc6KZOHGmyiyXragSMnc7oICSwXk.png', NULL, 'dokumen/slip_gaji/Vhy6JneiHWtXO5vYcD7Y2mvcQ9mrxGO4zskKxvTX.jpg', 'dokumen/foto/c9nxBPR5jBPDtqieLCe3pAINoR4ba1mY6v0gOgez.jpg', NULL),
+(17, 39, 3, 2, 2, NULL, 7600000, 'Lunas', NULL, '2026-06-18 16:39:35', NULL, 'Disetujui', '2026-06-18 08:58:40', '2026-06-18 09:39:35', '2026-06-18', 38000000, 20, 33372000, 41666.666666667, 2781000, 12, 'dokumen/kk/k3jgSYZx3l8uhf3hepPicyVf0sfS55cdaHMwuriL.jpg', 'dokumen/ktp/7MKlG08e2qXdqnf6zGgoTlrc29hmqPxeISJYqoet.png', 'dokumen/npwp/noSa1ngDcxlYYm49t9m9aDzLbF0p5bQJpXsANleR.jpg', 'dokumen/slip_gaji/84pRFfAY1revd9jLfSJ0IlEvPJHg0M5cka6dIBn5.png', 'dokumen/foto/Ctz5Xm9rV2oWfSuHCU8Ssi4R0IxwWrU75FA0QNqj.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -637,14 +701,14 @@ INSERT INTO `pengajuan_kredit` (`id`, `id_pelanggan`, `id_motor`, `id_jenis_cici
 CREATE TABLE `pengiriman` (
   `id` bigint UNSIGNED NOT NULL,
   `id_kredit` bigint UNSIGNED NOT NULL,
-  `no_resi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kurir` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `alamat_pengiriman` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `no_resi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kurir` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alamat_pengiriman` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tgl_pengiriman` date DEFAULT NULL,
   `tgl_estimasi_sampai` date DEFAULT NULL,
   `tgl_sampai` date DEFAULT NULL,
-  `status` enum('Diproses','Dikirim','Selesai','Batal') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Diproses',
-  `keterangan` text COLLATE utf8mb4_unicode_ci,
+  `status` enum('Diproses','Dikirim','Selesai','Batal') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Diproses',
+  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -658,7 +722,9 @@ INSERT INTO `pengiriman` (`id`, `id_kredit`, `no_resi`, `kurir`, `alamat_pengiri
 (2, 10, 'KRM-10-20260426', 'Akan ditentukan', 'Alamat belum diisi', NULL, NULL, NULL, 'Diproses', NULL, '2026-04-26 09:41:02', '2026-04-26 09:41:02'),
 (3, 11, 'KRM-11-20260426', 'Akan ditentukan', 'Alamat belum diisi', NULL, NULL, NULL, 'Diproses', NULL, '2026-04-26 09:41:02', '2026-04-26 09:41:02'),
 (4, 12, 'KRM-12-20260427-364', 'J&T', 'Bj. Gede Jl. Curug mas', '2026-04-27', '2026-04-30', NULL, 'Dikirim', 'Pengiriman dibuat otomatis setelah DP lunas', '2026-04-26 21:25:52', '2026-04-26 23:41:47'),
-(5, 13, 'KRM-13-20260428-104', 'J&T', 'Jl.curug mas', '2026-04-30', '2026-05-01', NULL, 'Dikirim', 'P P APh', '2026-04-28 00:08:34', '2026-04-30 05:19:50');
+(5, 13, 'KRM-13-20260428-104', 'J&T', 'Jl.curug mas', '2026-04-30', '2026-05-01', NULL, 'Dikirim', 'P P APh', '2026-04-28 00:08:34', '2026-04-30 05:19:50'),
+(6, 16, 'KRM-16-20260616-768', 'Akan ditentukan', '-', NULL, NULL, NULL, 'Diproses', 'Pengiriman dibuat otomatis setelah DP lunas', '2026-06-16 06:11:38', '2026-06-16 06:11:38'),
+(7, 18, 'KRM-00018-20260618', 'JNE', 'Jl.Tangerang 1', '2026-06-18', '2026-06-22', NULL, 'Dikirim', NULL, '2026-06-18 11:08:23', '2026-06-18 11:08:41');
 
 -- --------------------------------------------------------
 
@@ -667,11 +733,11 @@ INSERT INTO `pengiriman` (`id`, `id_kredit`, `no_resi`, `kurir`, `alamat_pengiri
 --
 
 CREATE TABLE `sessions` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -680,9 +746,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('8Pxos8Kg5dpxOU5H2V53aGxOujzOhHdI0xjM0OvV', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJmOGFZUlhDdGQ5V1A3aWdaZ0J6blBwU21tQlllWXdRWURMNDV3a01yIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0OjgwMDAiLCJyb3V0ZSI6ImhvbWUifX0=', 1777552447),
-('J8aiLvAfPpEQUeIa8Za78LD02vmkcxt8Ih8KJLL0', NULL, '127.0.0.1', 'Veritrans', 'eyJfdG9rZW4iOiI0S0FvQXJzNklEQklNaGVNR25lYmN2ZTZmTlJpWGlHZU1qMnNRdlZuIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1777548425),
-('wOXM2yHTd1W7Te9QcxHsfkr2su6up34742bXVd7E', NULL, '127.0.0.1', 'Veritrans', 'eyJfdG9rZW4iOiJMVFF3NVd5bjhSRkhEbnNXWWh4czByczRoeDB6NWVoNXZQbHRmOWpwIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1777547465);
+('1WzolnwNt74HxhIDe33WWDhcP6ULMVeyGyOzfsgl', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.124.2 Chrome/148.0.7778.97 Electron/42.2.0 Safari/537.36', 'eyJfdG9rZW4iOiJUa1VjbG5CN0NTSFdVYnREd3oyZThNOHo2U3FERkRYODc3cDBvakVYIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4MDAwIiwicm91dGUiOiJob21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1781797719),
+('F6AA3fBCiJtgZFShi52Jn7lnA9wbkXYuapln3bMp', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJ0TllMSDJmd1djRVp1R2ZXdzlVQUl5UEdFdkZxbU9GaUUxdFVqYk14IiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDAiLCJyb3V0ZSI6ImhvbWUifX0=', 1781806996),
+('ORF5nSr98oS52OVqcEKZ6LD0YR2UR6XkslofHnAd', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJyalB5VG5JTzB2MmY4R0VHdDh0bFZGVExkWjUxblVyS01XSXdJbUZ1IiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwIiwicm91dGUiOiJob21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1781800257);
 
 -- --------------------------------------------------------
 
@@ -692,12 +758,12 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 
 CREATE TABLE `users` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `role` enum('admin','marketing','ceo','client') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'client',
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` enum('admin','marketing','ceo','client') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'client',
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -712,7 +778,15 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 (9, 'el razqa', 'el098765@gmail.com', NULL, '$2y$12$QCfKfitKCidzv6DCliTHuuKUmJ94pXF86VveJ8uBH4fCVn47mrw3G', 'client', 'AoNn43LRODb4AKNjvvEbSnFsx4j5zdAeSCb856Jb1jG4XHclB0kg5hZYSNNL', '2026-04-17 05:15:15', '2026-04-17 05:15:15'),
 (10, 'marketing', 'marketing@gmail.com', NULL, '$2y$12$pVNmTV3KxVZP9F52Xsqzn.98TQynFWVuStqVZfe1IgZcMnS.68.WK', 'marketing', NULL, '2026-04-27 23:33:19', '2026-04-27 23:33:19'),
 (11, 'ceo laguna', 'ceo@gmail.com', NULL, '$2y$12$NE2uS95aBP7s5Arz34n8ueYmRGlg7MiHcq2HGwQi5YuLkU0Yoirc.', 'ceo', NULL, '2026-04-29 18:44:01', '2026-04-29 18:44:01'),
-(12, 'Rehan', 'rehanc@gmail.com', NULL, '$2y$12$9yHZyCk4qxVmz825S2vgnOaVRLtX6UgEcDWpQnRZWjDBsjlPvTMFy', 'client', NULL, '2026-04-30 04:34:26', '2026-04-30 04:34:26');
+(12, 'Rehan', 'rehanc@gmail.com', NULL, '$2y$12$9yHZyCk4qxVmz825S2vgnOaVRLtX6UgEcDWpQnRZWjDBsjlPvTMFy', 'client', NULL, '2026-04-30 04:34:26', '2026-04-30 04:34:26'),
+(13, 'el razqa', 'teddy001@gmail.com', NULL, '$2y$12$W45Qu3kZfCWnavMSS7FlduoPzF6MrqJfUov3tqf/Zwjh5lPTSua6u', 'client', NULL, '2026-06-12 00:56:47', '2026-06-12 00:56:47'),
+(14, 'achmad', 'achmadarr@gmail.com', NULL, '$2y$12$KpUtAO90X7TNLIVOadwND.lwq14gQuhWpHavCw3vyqdkTSCSdWyse', 'client', NULL, '2026-06-16 05:30:45', '2026-06-16 05:30:45'),
+(15, 'Fadhil', 'fadhil01@gmail.com', NULL, '$2y$12$1.0j9/.swSRdk69ppqbXwesfSVfYG/qXWiJyH85gVYwOYwXu9itCS', 'client', NULL, '2026-06-16 05:54:42', '2026-06-16 05:54:42'),
+(16, 'Rei', 'rei01@gmail.com', NULL, '$2y$12$QijSPJdEdVJsM.FCaPrIK.8mOoJ0NXkaef3RI16/ZhEabERyQv6oq', 'client', NULL, '2026-06-16 06:01:11', '2026-06-16 06:01:11'),
+(17, 'testes', 'tes01@gmail.com', NULL, '$2y$12$AWGOdFtf8DtEmgHyD7ozge6GHndZsqnTUw6tukDWxpP.jBPr.3UAG', 'client', NULL, '2026-06-16 06:02:59', '2026-06-16 06:02:59'),
+(18, 'chaeruzzaman', 'chaeruzzaman@gmail.com', NULL, '$2y$12$JyT/WAPglTOOZrfU8oldDuxNlBPgLUGi6Zlujocmhrsn44KF0RXMS', 'client', NULL, '2026-06-16 06:04:16', '2026-06-16 06:04:16'),
+(19, 'Callista', 'callista01@gmail.com', NULL, '$2y$12$RxXtQjOAcv3XIABPXygAfeJdXeTVaVZuj2bWoz5X5dBqtLplkN3AO', 'client', NULL, '2026-06-16 06:36:22', '2026-06-16 06:36:22'),
+(20, 'Danial', 'danial01@gmail.com', NULL, '$2y$12$jXosYqWjBZxBwHlp06aL2uKZVCRzMWEb49d9lKuzcA266CuFAulIS', 'client', NULL, '2026-06-18 08:57:35', '2026-06-18 08:57:35');
 
 --
 -- Indexes for dumped tables
@@ -879,13 +953,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `angsuran`
 --
 ALTER TABLE `angsuran`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 
 --
 -- AUTO_INCREMENT for table `asuransi`
 --
 ALTER TABLE `asuransi`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -921,7 +995,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `kredit`
 --
 ALTER TABLE `kredit`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `metode_bayar`
@@ -945,7 +1019,7 @@ ALTER TABLE `motor`
 -- AUTO_INCREMENT for table `pelanggans`
 --
 ALTER TABLE `pelanggans`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `pembayaran`
@@ -963,19 +1037,19 @@ ALTER TABLE `pembayarans`
 -- AUTO_INCREMENT for table `pengajuan_kredit`
 --
 ALTER TABLE `pengajuan_kredit`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
