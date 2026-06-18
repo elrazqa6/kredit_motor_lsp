@@ -136,12 +136,7 @@
                                 </span>
                             </td>
                             <td class="text-center pe-4">
-                                <div class="d-flex gap-1 justify-content-center">
-                                    <a href="{{ route('admin.jenis-motor.edit', $item->id) }}" 
-                                       class="btn btn-sm btn-outline-warning btn-action"
-                                       title="Edit">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
+                                
                                     <button type="button" 
                                             class="btn btn-sm btn-outline-info btn-action toggle-status-btn"
                                             data-id="{{ $item->id }}"

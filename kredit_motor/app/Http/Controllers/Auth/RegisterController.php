@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Pelanggan;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -59,13 +60,22 @@ class RegisterController extends Controller
      *
      * @return User
      */
-    protected function create(array $data)
+protected function create(array $data)
 {
-    return User::create([
+    $user = User::create([
         'name'     => $data['name'],
         'email'    => $data['email'],
         'password' => Hash::make($data['password']),
-        'role'     => 'client', 
+        'role'     => 'client',
     ]);
+
+    Pelanggan::create([
+        'user_id'        => $user->id,
+        'nama_pelanggan' => $user->name,
+        'email'          => $user->email,
+        'no_telp'        => '-',
+    ]);
+
+    return $user;
 }
 }

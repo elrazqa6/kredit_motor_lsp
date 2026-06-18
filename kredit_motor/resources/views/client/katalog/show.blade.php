@@ -136,20 +136,7 @@
                     </div>
                     
                     <!-- Quick Action Buttons -->
-                    <div class="d-flex gap-3 mb-4">
-                        <button type="button" 
-                                class="btn btn-primary rounded-pill px-5 py-3 flex-grow-1 fw-semibold quick-simulasi"
-                                data-harga="{{ $motor->harga_jual }}"
-                                data-nama="{{ $motor->nama_motor }}"
-                                data-id="{{ $motor->id }}"
-                                data-bs-toggle="modal"
-                                data-bs-target="#simulasiCepatModal">
-                            <i class="fas fa-chart-line me-2"></i> Simulasi Kredit
-                        </button>
-                        <a href="#" class="btn btn-outline-primary rounded-pill px-4 py-3">
-                            <i class="fas fa-heart"></i>
-                        </a>
-                    </div>
+                    
                     
                     <!-- Tombol Ajukan Kredit Langsung -->
                     <a href="{{ route('client.pengajuan.create', ['motor_id' => $motor->id]) }}" 

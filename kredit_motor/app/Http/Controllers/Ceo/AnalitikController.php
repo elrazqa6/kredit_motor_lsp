@@ -16,60 +16,158 @@ class AnalitikController extends Controller
     public function index(Request $request)
     {
         $tahun = $request->get('tahun', date('Y'));
+        $filter = $request->get('filter');
 
-        // Pendapatan per bulan
-        $pendapatanBulanan = Angsuran::select(
-                DB::raw('MONTH(tgl_bayar) as bulan'),
-                DB::raw('SUM(total_bayar) as total')
-            )
-            ->whereNotNull('tgl_bayar')
-            ->whereYear('tgl_bayar', $tahun)
-            ->groupBy('bulan')
-            ->get();
+        $tanggalMulai = null;
+        $tanggalSelesai = null;
 
-        $bulanLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
-        $pendapatanData = array_fill(0, 12, 0);
-        foreach ($pendapatanBulanan as $item) {
-            $pendapatanData[$item->bulan - 1] = (int) $item->total;
+        switch ($filter) {
+            case 'bulan_ini':
+                $tanggalMulai = now()->startOfMonth();
+                $tanggalSelesai = now()->endOfMonth();
+                break;
+
+            case 'tahun_ini':
+                $tanggalMulai = now()->startOfYear();
+                $tanggalSelesai = now()->endOfYear();
+                break;
+
+            case 'custom':
+                if ($request->filled('tanggal_mulai') && $request->filled('tanggal_selesai')) {
+                    $tanggalMulai = $request->tanggal_mulai;
+                    $tanggalSelesai = $request->tanggal_selesai;
+                }
+                break;
+        }
+// =========================
+// Tren Pengajuan & Persetujuan Kredit
+// =========================
+
+$bulanLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+
+$pengajuanPerBulan = PengajuanKredit::select(
+        DB::raw('MONTH(created_at) as bulan'),
+        DB::raw('COUNT(*) as total')
+    )
+    ->when(
+        $tanggalMulai && $tanggalSelesai,
+        function ($query) use ($tanggalMulai, $tanggalSelesai) {
+            $query->whereBetween('created_at', [$tanggalMulai, $tanggalSelesai]);
+        },
+        function ($query) use ($tahun) {
+            $query->whereYear('created_at', $tahun);
+        }
+    )
+    ->groupBy('bulan')
+    ->get();
+
+$disetujuiPerBulan = PengajuanKredit::select(
+        DB::raw('MONTH(created_at) as bulan'),
+        DB::raw('COUNT(*) as total')
+    )
+    ->where('status_pengajuan', 'Disetujui')
+    ->when(
+        $tanggalMulai && $tanggalSelesai,
+        function ($query) use ($tanggalMulai, $tanggalSelesai) {
+            $query->whereBetween('created_at', [$tanggalMulai, $tanggalSelesai]);
+        },
+        function ($query) use ($tahun) {
+            $query->whereYear('created_at', $tahun);
+        }
+    )
+    ->groupBy('bulan')
+    ->get();
+
+$pengajuanData = array_fill(0, 12, 0);
+$disetujuiData = array_fill(0, 12, 0);
+
+foreach ($pengajuanPerBulan as $item) {
+    $pengajuanData[$item->bulan - 1] = $item->total;
+}
+
+foreach ($disetujuiPerBulan as $item) {
+    $disetujuiData[$item->bulan - 1] = $item->total;
+}
+
+        // =========================
+        // Status Pengajuan
+        // =========================
+        $pengajuanQuery = PengajuanKredit::query();
+
+        if ($tanggalMulai && $tanggalSelesai) {
+            $pengajuanQuery->whereBetween('created_at', [$tanggalMulai, $tanggalSelesai]);
+        } else {
+            $pengajuanQuery->whereYear('created_at', $tahun);
         }
 
-        // Status pengajuan
         $statusPengajuan = [
-            'Menunggu' => PengajuanKredit::where('status_pengajuan', 'Menunggu')->whereYear('created_at', $tahun)->count(),
-            'Disetujui' => PengajuanKredit::where('status_pengajuan', 'Disetujui')->whereYear('created_at', $tahun)->count(),
-            'Ditolak' => PengajuanKredit::where('status_pengajuan', 'Ditolak')->whereYear('created_at', $tahun)->count(),
+            'Menunggu' => (clone $pengajuanQuery)->where('status_pengajuan', 'Menunggu')->count(),
+            'Disetujui' => (clone $pengajuanQuery)->where('status_pengajuan', 'Disetujui')->count(),
+            'Ditolak' => (clone $pengajuanQuery)->where('status_pengajuan', 'Ditolak')->count(),
         ];
 
-        // Status kredit
+        // =========================
+        // Status Kredit
+        // =========================
+        $kreditQuery = Kredit::query();
+
+        if ($tanggalMulai && $tanggalSelesai) {
+            $kreditQuery->whereBetween('created_at', [$tanggalMulai, $tanggalSelesai]);
+        } else {
+            $kreditQuery->whereYear('created_at', $tahun);
+        }
+
         $statusKredit = [
-            'Aktif' => Kredit::where('status_kredit', 'Dicicil')->whereYear('created_at', $tahun)->count(),
-            'Lunas' => Kredit::where('status_kredit', 'Lunas')->whereYear('created_at', $tahun)->count(),
-            'Macet' => Kredit::where('status_kredit', 'Macet')->whereYear('created_at', $tahun)->count(),
+            'Aktif' => (clone $kreditQuery)->where('status_kredit', 'Dicicil')->count(),
+            'Lunas' => (clone $kreditQuery)->where('status_kredit', 'Lunas')->count(),
+            'Macet' => (clone $kreditQuery)->where('status_kredit', 'Macet')->count(),
         ];
 
-        // Motor terlaris
+        // =========================
+        // Motor Terlaris
+        // =========================
         $motorTerlaris = Motor::withCount('pengajuanKredit')
             ->orderBy('pengajuan_kredit_count', 'desc')
             ->limit(10)
             ->get();
 
-        // Pertumbuhan pelanggan
+        // =========================
+        // Pertumbuhan Pelanggan
+        // =========================
         $pelangganPerBulan = Pelanggan::select(
                 DB::raw('MONTH(created_at) as bulan'),
                 DB::raw('COUNT(*) as total')
             )
-            ->whereYear('created_at', $tahun)
+            ->when(
+                $tanggalMulai && $tanggalSelesai,
+                function ($query) use ($tanggalMulai, $tanggalSelesai) {
+                    $query->whereBetween('created_at', [$tanggalMulai, $tanggalSelesai]);
+                },
+                function ($query) use ($tahun) {
+                    $query->whereYear('created_at', $tahun);
+                }
+            )
             ->groupBy('bulan')
             ->get();
 
         $pelangganData = array_fill(0, 12, 0);
+
         foreach ($pelangganPerBulan as $item) {
             $pelangganData[$item->bulan - 1] = $item->total;
         }
-
-        return view('ceo.analitik.index', compact(
-            'tahun', 'bulanLabels', 'pendapatanData', 'statusPengajuan',
-            'statusKredit', 'motorTerlaris', 'pelangganData'
-        ));
+        
+return view('ceo.analitik.index', compact(
+    'tahun',
+    'filter',
+    'tanggalMulai',
+    'tanggalSelesai',
+    'bulanLabels',
+    'pengajuanData',
+    'disetujuiData',
+    'statusPengajuan',
+    'statusKredit',
+    'motorTerlaris',
+    'pelangganData'
+));
     }
 }

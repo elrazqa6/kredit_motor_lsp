@@ -116,13 +116,15 @@ class MidtransController extends Controller
     // Webhook notifikasi dari Midtrans
     public function handleNotification(Request $request)
     {
+        Log::info('WEBHOOK MASUK');
+        
         $notification = json_decode($request->getContent(), true);
         
         Log::info('Midtrans Notification:', $notification);
         
         $orderId = $notification['order_id'];
         $transactionStatus = $notification['transaction_status'];
-        $fraudStatus = $notification['fraud_status'];
+        $fraudStatus = $notification['fraud_status'] ?? null;
         
         // Pembayaran DP
         if (strpos($orderId, 'DP-') === 0) {
@@ -190,11 +192,62 @@ class MidtransController extends Controller
     }
     
     // Halaman sukses
-    public function success(Request $request)
-    {
-        $orderId = $request->query('order_id');
-        return view('client.midtrans.success', compact('orderId'));
+  public function success(Request $request)
+{
+    $orderId = $request->query('order_id');
+
+    if ($orderId) {
+
+        // DP
+        if (strpos($orderId, 'DP-') === 0) {
+
+            $pengajuanId = explode('-', $orderId)[1];
+
+            $pengajuan = PengajuanKredit::find($pengajuanId);
+
+            if ($pengajuan) {
+                $pengajuan->update([
+                    'status_dp' => 'Lunas',
+                    'tgl_bayar_dp' => now(),
+                ]);
+            }
+        }
+
+        // ANGSURAN
+        elseif (strpos($orderId, 'AGS-') === 0) {
+
+            $angsuranId = explode('-', $orderId)[1];
+
+            $angsuran = Angsuran::find($angsuranId);
+
+            if ($angsuran && !$angsuran->tgl_bayar) {
+
+                $angsuran->update([
+                    'tgl_bayar' => now(),
+                ]);
+
+                $kredit = $angsuran->kredit;
+
+                if ($kredit) {
+
+                    $sisaBaru = $kredit->sisa_kredit - $angsuran->total_bayar;
+
+                    $kredit->update([
+                        'sisa_kredit' => $sisaBaru
+                    ]);
+
+                    if ($sisaBaru <= 0) {
+                        $kredit->update([
+                            'status_kredit' => 'Lunas'
+                        ]);
+                    }
+                }
+            }
+        }
     }
+
+    return view('client.midtrans.success', compact('orderId'));
+}
     
     // Halaman pending
     public function pending(Request $request)

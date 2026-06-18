@@ -185,70 +185,13 @@
                     </div>
                 </div>
 
-                <!-- SECTION 3: Metode Pembayaran (BARU) -->
-                <div class="card border-0 shadow-sm rounded-4 mb-4">
-                    <div class="card-header bg-white border-0 p-4 pb-0">
-                        <h5 class="fw-bold mb-0">
-                            <i class="fas fa-credit-card text-primary me-2"></i> 3. Metode Pembayaran
-                        </h5>
-                    </div>
-                    <div class="card-body p-4">
-                        <p class="text-muted small mb-3">Pilih metode pembayaran untuk angsuran bulanan Anda nanti.</p>
-                        
-                        <div class="row g-3" id="metodeBayarContainer">
-                            @foreach($metodeBayar as $method)
-                            <div class="col-md-6">
-                                <div class="method-card" onclick="selectMetode({{ $method->id }})" data-method-id="{{ $method->id }}">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="method-icon">
-                                            @if($method->url_logo)
-                                                <img src="{{ asset('storage/'.$method->url_logo) }}" style="width: 45px; height: 45px; object-fit: cover; border-radius: 12px;">
-                                            @else
-                                                <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-                                                    <i class="fas fa-university fa-xl text-primary"></i>
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <div class="fw-bold">{{ $method->metode_pembayaran }}</div>
-                                            <small class="text-muted">{{ $method->tempat_bayar }}</small>
-                                            @if($method->no_rekening)
-                                                <br><small class="text-primary">No. Rek: {{ $method->no_rekening }}</small>
-                                            @endif
-                                        </div>
-                                        <div class="method-radio">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="id_metode_bayar" 
-                                                    value="{{ $method->id }}" id="method{{ $method->id }}"
-                                                    {{ old('id_metode_bayar') == $method->id ? 'checked' : '' }}
-                                                    onchange="selectMetode({{ $method->id }})" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                        
-                        @error('id_metode_bayar')
-                            <div class="text-danger small mt-2">{{ $message }}</div>
-                        @enderror
-                        
-                        <!-- Info Metode Terpilih -->
-                        <div id="metodeInfo" class="mt-3 p-3 bg-success bg-opacity-10 rounded-3" style="display: none;">
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="fas fa-info-circle text-success"></i>
-                                <span id="metodeInfoText">Metode pembayaran dipilih</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         
 
                 <!-- SECTION 4: Dokumen -->
                 <div class="card border-0 shadow-sm rounded-4 mb-4">
                     <div class="card-header bg-white border-0 p-4 pb-0">
                         <h5 class="fw-bold mb-0">
-                            <i class="fas fa-file-upload text-primary me-2"></i> 4. Dokumen Pendukung
+                            <i class="fas fa-file-upload text-primary me-2"></i> 3. Dokumen Pendukung
                         </h5>
                     </div>
                     <div class="card-body p-4">
@@ -546,13 +489,14 @@ function hitungRingkasan() {
     }
 
     // Hitung kredit
-    const hargaCash = harga;
-    const pokokKredit = harga - uangMuka + biayaAsuransi;
+    // Hitung kredit
+    const pokokKredit = harga - uangMuka;
     const bungaTotal = pokokKredit * (margin / 100) * (bulan / 12);
-    const totalKredit = pokokKredit + bungaTotal;
-    const cicilan = totalKredit / bulan;
+    const totalAngsuran = pokokKredit + bungaTotal;
+    const asuransiPerBulan = biayaAsuransi / bulan;
+    const cicilan = (totalAngsuran / bulan) + asuransiPerBulan;
+    const totalBayar = uangMuka + totalAngsuran + biayaAsuransi;
     const dpPersen = (uangMuka / harga) * 100;
-    const biayaAsuransiPerBulan = biayaAsuransi / bulan;
 
     // Update tampilan
     document.getElementById('summaryHarga').innerText = formatRp(harga);
@@ -562,15 +506,16 @@ function hitungRingkasan() {
     document.getElementById('sumTenor').innerText = bulan + ' bulan';
     document.getElementById('sumDP').innerText = formatRp(uangMuka);
     document.getElementById('sumCicilan').innerText = formatRp(cicilan);
-    document.getElementById('sumTotal').innerText = formatRp(totalKredit);
+    document.getElementById('sumTotal').innerText = formatRp(totalBayar);
 
     // Update hidden inputs
-    document.getElementById('hargaKreditInput').value = totalKredit;
+    document.getElementById('hargaKreditInput').value = totalAngsuran;
     document.getElementById('cicilanPerbulanInput').value = cicilan;
     document.getElementById('dpPersenInput').value = dpPersen;
-    document.getElementById('hargaCashInput').value = hargaCash;
-    document.getElementById('biayaAsuransiPerbulanInput').value = biayaAsuransiPerBulan;
+    document.getElementById('hargaCashInput').value = harga;
+    document.getElementById('biayaAsuransiPerbulanInput').value = asuransiPerBulan;
     document.getElementById('tenorInput').value = bulan;
+
 }
 
 // Event listeners

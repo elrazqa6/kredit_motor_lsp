@@ -87,6 +87,11 @@ Route::prefix('client')
         // Dashboard
         Route::get('/dashboard', [\App\Http\Controllers\Client\DashboardController::class, 'index'])->name('dashboard');
 
+        Route::get(
+    '/pengajuan/{id}/print-dp',
+    [\App\Http\Controllers\Client\PengajuanController::class, 'printDp']
+)->name('pengajuan.print-dp');
+
         // Kredit
         Route::resource('pengajuan', \App\Http\Controllers\Client\PengajuanController::class);
         Route::delete('pengajuan/{id}/cancel', [\App\Http\Controllers\Client\PengajuanController::class, 'cancel'])

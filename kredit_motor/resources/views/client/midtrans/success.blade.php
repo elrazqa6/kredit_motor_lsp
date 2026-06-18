@@ -34,25 +34,26 @@
         </div>
     </div>
 </div>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const orderId = '{{ $orderId }}';
-    console.log('Order ID:', orderId);
-    
-    // Extract angsuran ID dari Order ID (format: AGS-75-1745678900)
-    if (orderId && orderId.includes('AGS-')) {
+
+    if (orderId.startsWith('DP-')) {
+        const parts = orderId.split('-');
+        const pengajuanId = parts[1];
+
+        setTimeout(function() {
+            window.location.href = '/client/pengajuan/' + pengajuanId;
+        }, 2000);
+    }
+
+    if (orderId.startsWith('AGS-')) {
         const parts = orderId.split('-');
         const angsuranId = parts[1];
-        
-        if (angsuranId) {
-            console.log('Angsuran ID:', angsuranId);
-            
-            // Redirect ke halaman print setelah 2 detik
-            setTimeout(function() {
-                window.location.href = '/client/angsuran/' + angsuranId + '/print';
-            }, 2000);
-        }
+
+        setTimeout(function() {
+            window.location.href = '/client/angsuran/' + angsuranId + '/print';
+        }, 2000);
     }
 });
 </script>

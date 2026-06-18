@@ -96,21 +96,7 @@
                         <i class="fas {{ $badgeClass['icon'] }} me-1"></i>{{ $badgeClass['label'] }}
                     </span>
 
-                    {{-- Hover overlay — hanya dua tombol, tanpa full dark cover --}}
-                    <div class="motor-hover-bar">
-                        <a href="{{ route('client.motor.show', $motor->id) }}"
-                           class="mhb-btn mhb-outline">
-                            <i class="fas fa-info-circle me-1"></i>Detail
-                        </a>
-                        <button type="button"
-                                class="mhb-btn mhb-yellow quick-simulasi"
-                                data-harga="{{ $motor->harga_jual }}"
-                                data-nama="{{ $motor->nama_motor }}"
-                                data-bs-toggle="modal"
-                                data-bs-target="#simulasiCepatModal">
-                            <i class="fas fa-chart-line me-1"></i>Simulasi
-                        </button>
-                    </div>
+                    
                 </div>
 
                 {{-- ── Body ───────────────────────────────────────────────── --}}
@@ -173,15 +159,6 @@
                            class="btn-detail flex-grow-1 text-center">
                             <i class="fas fa-info-circle me-1"></i> Detail
                         </a>
-                        <button type="button"
-                                class="btn-simulasi quick-simulasi"
-                                data-harga="{{ $motor->harga_jual }}"
-                                data-nama="{{ $motor->nama_motor }}"
-                                data-bs-toggle="modal"
-                                data-bs-target="#simulasiCepatModal"
-                                title="Simulasi Kredit">
-                            <i class="fas fa-chart-line"></i>
-                        </button>
                     </div>
                 </div>
             </div>

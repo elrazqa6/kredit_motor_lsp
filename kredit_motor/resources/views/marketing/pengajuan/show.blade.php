@@ -332,6 +332,9 @@
             <form action="{{ route('marketing.pengiriman.store') }}" method="POST">
                 @csrf
                 <input type="hidden" name="id_kredit" value="{{ $kredit->id ?? '' }}">
+                <input type="hidden"
+       name="alamat_pengiriman"
+       value="{{ $pengajuan->pelanggan->alamat1 ?? '-' }}">
                 <div class="modal-body p-4">
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Kurir</label>

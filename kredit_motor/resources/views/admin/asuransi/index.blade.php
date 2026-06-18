@@ -267,7 +267,7 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('admin.asuransi.create') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.asuransi.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body p-4">
                     <div class="row g-3">

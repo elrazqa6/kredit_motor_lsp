@@ -244,49 +244,13 @@
                 </div>
             </div>
         </div>
-
-        <!-- METODE PEMBAYARAN (BARU) -->
-        <div class="info-card">
-            <h5 class="fw-bold mb-4">
-                <i class="fas fa-credit-card text-primary me-2"></i> Metode Pembayaran
-            </h5>
-            <div class="row g-3">
-                <div class="col-12">
-                    @if($pengajuan->metodeBayar)
-                        <div class="method-card">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="method-icon">
-                                    @if($pengajuan->metodeBayar->url_logo)
-                                        <img src="{{ asset('storage/'.$pengajuan->metodeBayar->url_logo) }}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 12px;">
-                                    @else
-                                        <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                            <i class="fas fa-university fa-xl text-primary"></i>
-                                        </div>
-                                    @endif
-                                </div>
-                                <div class="flex-grow-1">
-                                    <div class="fw-bold fs-5">{{ $pengajuan->metodeBayar->metode_pembayaran }}</div>
-                                    <div class="text-muted small">
-                                        <i class="fas fa-map-marker-alt me-1"></i> {{ $pengajuan->metodeBayar->tempat_bayar }}
-                                    </div>
-                                    @if($pengajuan->metodeBayar->no_rekening)
-                                        <div class="text-primary small mt-1">
-                                            <i class="fas fa-credit-card me-1"></i> No. Rekening: {{ $pengajuan->metodeBayar->no_rekening }}
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    @else
-                        <div class="text-center py-3 text-muted">
-                            <i class="fas fa-credit-card fa-2x mb-2 opacity-50"></i>
-                            <p class="mb-0">Belum memilih metode pembayaran</p>
-                        </div>
-                    @endif
-                </div>
-            </div>
-        </div>
-        
+@if($pengajuan->status_dp == 'Lunas')
+<a href="{{ route('client.pengajuan.print-dp', $pengajuan->id) }}"
+   class="btn btn-success">
+    <i class="fas fa-print me-2"></i>
+    Cetak Kwitansi DP
+</a>
+@endif
         <!-- Ringkasan Pembayaran -->
         <div class="info-card">
             <h5 class="fw-bold mb-4">

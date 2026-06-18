@@ -52,7 +52,7 @@ class PengajuanController extends Controller
             'id_motor' => 'required|exists:motor,id',
             'id_jenis_cicilan' => 'required|exists:jenis_cicilan,id',
             'id_asuransi' => 'nullable|exists:asuransi,id',
-            'id_metode_bayar' => 'required|exists:metode_bayar,id',  // ← VALIDASI
+            'id_metode_bayar' => 'nullable|exists:metode_bayar,id',  // ← VALIDASI
             'uang_muka' => 'required|numeric|min:0',
             'url_ktp' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
             'url_kk' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
@@ -167,5 +167,24 @@ public function cancel($id)
     
     return redirect()->route('client.pengajuan.index')
         ->with('success', 'Pengajuan berhasil dibatalkan.');
+}
+
+public function printDp($id)
+{
+    $pelanggan = Auth::user()->pelanggan;
+
+    $pengajuan = PengajuanKredit::with([
+        'motor',
+        'pelanggan'
+    ])
+    ->where('id_pelanggan', $pelanggan->id)
+    ->findOrFail($id);
+
+    if ($pengajuan->status_dp != 'Lunas') {
+        return redirect()->back()
+            ->with('error', 'DP belum lunas.');
+    }
+
+    return view('client.pengajuan.print-dp', compact('pengajuan'));
 }
 }
